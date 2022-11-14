@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImgR | Images for all devices</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">ImgR</div>
+        <a>How to Use</a>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Responsive images for your apps</h1>
+            <p>Resize your images for all screens</p>
+            <label for="file" class='fileLabel'>Choose file</label>
+            <input type="file" id="file" accept="image/*"  class='fileInput'/>
+            <p id="fileName"></p>
+        </section>
+        <section class="dimensions pixels">
+            <div>
+                <h2>Input Desired Dimensions</h2>
+                <div>
+                    <label for="width">Width <span><small>(in pixels)</small></span></label>
+                    <input type ='number' name="width" id="width" />
+                </div>
+                <div>
+                    <label for="heigth">Height <span><small>(in pixels)</small></span></label>
+                    <input type ='number' name="height" id="height" />
+                </div>
+                <button id="btnByPixels">Submit</button>
+                <div>
+                    <p>Note: If you would like to maintain apect ratio</p><p>leave either one of the width or height empty</p>
+                </div>
+            </div>
+            <div class="img">
+                <img src="./styles/download.png" id="imgByPixels" />
+                <a id="downloadByPixels" download >Download </a>
+            </div>
+        </section>
+        <h3 class="or">OR</h3>
+        <section class="dimensions factor">
+            <div>
+                <h2>Input Factor to scale by</h2>
+                <p>Any number between 0 and 1</p>
+                <p>0.5 for half the size, 0.25 for quarter the size</p>
+                <input type ='number' name="factor" id="factor" />
+                <button id="btnByFactor">Submit</button>
+            </div>
+            <div>
+                <img src="./styles/download.png"  id="imgByFactor" />
+                <a download id="downloadByFactor">Download </a>
+            </div>
+        </section>
+        <section class="allScreen">
+            <h2>Alternatively you can leave all the heavy lifting for us</h2>
+            <p>let us generate images for all your screens ourselves </p>
+            <button id="allScreensBtn">Go</button>
+            <div class="dimensions">
+                <div class="img">
+                    <h3>For Phones</h3>
+                    <img src="./styles/download.png" id="phone" />
+                    <a id="downloadPhone" download >Download </a>
+                </div>
+                <div class="img">
+                    <h3>For Tablets</h3>
+                    <img src="./styles/download.png" id="tablet" />
+                    <a id="downloadTablet" download >Download </a>
+                </div>
+                <div class="img">
+                    <h3>For Desktops</h3>
+                    <img src="./styles/download.png" id="desktop" />
+                    <a id="downloadDesktop" download >Download </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <small>&copy; 2022 David Okeke </small>
+    </footer>
+    <script text='javascript' src="./scripts/main.js"></script>
+</body>
+</html>
