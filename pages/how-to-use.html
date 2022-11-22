@@ -11,33 +11,40 @@
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap" rel="stylesheet">
         <style>
             body{
-                display: grid;
-                grid-template-rows:repeat(9, 1fr) ;
+               display: flex;
+               flex-direction: column;
+               height: 100vh;
             }
             article{
-                grid-row: 2/9;
-                text-align: justify;
+                flex: 1 0 auto ;
             }
-            header{
-                display: flex;
+            article >section{
+                text-align: justify;
+                font-size: 1.3em;
+                padding-top: 2em;
+                font-weight: 600;
+            }
+            footer{
+                flex-shrink: 0 ;
             }
         </style>
     </head>
     <body>
-        <header>
-            <div class="logo">ImgR</div>
-            <a>How to Use</a>
-        </header>
-        <article>
         
-            <p>If you have been building responsive websites for a while you must have encountered problems with Images</p>
-            <p>The meta viewport tag and Css styling gives us options to control the image tag, not the image file.
-            However the image tag srcset attribute allows us specify what image to download depending on the device.</p>
-            <p>With this we can specify different resolutions or sizes of the same image depending on the device width. But how do we get different sizes of the same image?</p> 
+        <article>
+            <header>
+                <a href="../index.html" class="logo">ImgR</a>
+                <a>How to Use</a>
+            </header>
+            <section>
+                <p>If you have been building responsive websites for a while you must have encountered problems with Images</p>
+                <p>The meta viewport tag and Css styling gives us options to control the image tag, not the image file.
+                However the image tag srcset attribute allows us specify what image to download depending on the device.</p>
+                <p>With this we can specify different resolutions or sizes of the same image depending on the device width. But how do we get different sizes of the same image?</p> 
 
-            <p>I built this tool for just that, I’ve been using it for a while but decided to open source it. At it’s core, it just spits out mobile, tablet and desktop sizes of images, very suitable for cover images and background images.</p>
-            <p> However if your image has solid objects in them like human faces, etc. they can get distorted so I added the option to scale down your image by a factor. There’s also an option to specify individual width and height or one of either and allow the image maintain aspect ratio.</p>
-
+                <p>I built this tool for just that, I’ve been using it for a while but decided to open source it. At it’s core, it just spits out mobile, tablet and desktop sizes of images, very suitable for cover images and background images.</p>
+                <p> However if your image has solid objects in them like human faces, etc. they can get distorted so I added the option to scale down your image by a factor. There’s also an option to specify individual width and height or one of either and allow the image maintain aspect ratio.</p>
+            </section>
         </article>
         <footer>
             <small>&copy; 2022 David Okeke </small>
